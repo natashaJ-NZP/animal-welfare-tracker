@@ -3,12 +3,12 @@ import {getFirestore} from "firebase/firestore";
 
 // Your web app's Firebase configuration
 initializeApp({
-  apiKey: "AIzaSyDQqMbfGJULRYbz75Czr-10my9AoBj5P_s",
-  authDomain: "animal-welfare-tracker.firebaseapp.com",
-  projectId: "animal-welfare-tracker",
-  storageBucket: "animal-welfare-tracker.appspot.com",
-  messagingSenderId: "899385075966",
-  appId: "1:899385075966:web:6c83c5f2e02ba0ff6a5daf"
+  apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
+  authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID ,
+  storageBucket: process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET ,
+  messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID
 });
 
 const firestore = getFirestore();
